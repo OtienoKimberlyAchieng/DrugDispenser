@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prescription Form</title>
+</head>
+<body>
+<h2>Prescription Form</h2>
+<form action="add_prescription.php" method="post">
+    
+    <label for="PSSN">Patient's SSN:</label><br>
+    <input type="text" id="PSSN" name="PSSN" required><br>
+    
+    <label for="DSSN">Doctor's SSN:</label><br>
+    <input type="text" id="DSSN" name="DSSN" required><br>
+
+    <label for="diagnosis">Diagnosis:</label><br>
+    <input type="text" id="diagnosis" name="diagnosis" required><br>
+    
+    <label for="tradeName">Drug Trade Name:</label><br>
+    <input type="text" id="tradeName" name="tradeName" required><br>
+    
+    <label for="quantity">Quantity:</label><br>
+    <input type="text" id="quantity" name="quantity" required><br>
+    
+    <label for="date">Date of Prescription:</label><br>
+    <input type="date" id="date" name="date" required><br>
+
+    
+    <input type="submit" name="add" value="Add Prescription" id="add_prescription">
+</form>
+</body>
+</html>
+
