@@ -2,10 +2,11 @@
 <html>
 <head>
 <title>Prescription Form</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <h2>Prescription Form</h2>
-<form action="add_prescription.php" method="post">
+<form action="http://localhost/ProjectFolder/add_prescription.php" method="post">
     
     <label for="PSSN">Patient's SSN:</label><br>
     <input type="text" id="PSSN" name="PSSN" required><br>
@@ -19,8 +20,8 @@
     <label for="tradeName">Drug Trade Name:</label><br>
     <input type="text" id="tradeName" name="tradeName" required><br>
     
-    <label for="quantity">Quantity:</label><br>
-    <input type="text" id="quantity" name="quantity" required><br>
+    <label for="frequency">Frequency:</label><br>
+    <input type="text" id="frequency" name="frequency" required><br>
     
     <label for="date">Date of Prescription:</label><br>
     <input type="date" id="date" name="date" required><br>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body>
+<h1>LOG IN</h1>
+<h2>DAWA SAWA</h2>
+<form id="loginForm" method="post">
+
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required><br/>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required><br/>
+
+    <button type="submit">Log in</button>
+    <hr>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label><br>
+    <label for="LoginOptions">Log in as:</label>
+    <select id="LoginOptions">
+      <option value="" selected disabled hidden>Select an option</option>
+      <option value="admin">Admin</option>
+      <option value="patient">Patient</option>
+      <option value="doctor">Doctor</option>
+      <option value="pharmacist">Pharmacist</option>
+    </select>
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+
+  <div>
+    <span class="password">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var selectedOption = document.getElementById("LoginOptions").value;
+
+    switch (selectedOption) {
+      case "admin":
+        // Redirect to admin dashboard
+        window.location.href = "admin_dashboard.html";
+        break;
+      case "patient":
+        // Redirect to patient dashboard
+        window.location.href = "patient_dashboard.html";
+        break;
+      case "doctor":
+        // Redirect to doctor dashboard
+        window.location.href = "doctor_dashboard.html";
+        break;
+      case "pharmacist":
+        // Redirect to pharmacist dashboard
+        window.location.href = "pharmacist_dashboard.html";
+        break;
+      default:
+        alert("Please select a login option");
+        break;
+    }
+  });
+</script>
+<p> Don't have an account?
+    <a href="signup.html">Sign up here</a>
+  </p>
+</body>
+</html>

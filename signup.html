@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="signup-container">
+    <h1>Signup</h1>
+    
+    <label for="signupOption">Signup as:</label>
+
+    <select id="signupOption">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="admin">Admin</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+        <option value="pharmacist">Pharmacist</option>
+    </select>
+    
+
+
+    <div class="button">
+    <button onclick="signup()">Sign up</button>
+    </div>
+    <p>Already have an account?</p><a href="login.html">log In</a>
+</div>
+
+    <script>
+        function signup() {
+            var selectedOption = document.getElementById("signupOption").value;
+            
+            switch (selectedOption) {
+                case "admin":
+                    // Redirect to admin signup page
+                    window.location.href = "AdminsForm.html";
+                    break;
+                case "patient":
+                    // Redirect to patient signup page
+                    window.location.href = "PatientsForm.html";
+                    break;
+                case "doctor":
+                    // Redirect to doctor signup page
+                    window.location.href = "DoctorsForm.html";
+                    break;
+                case "pharmacist":
+                    // Redirect to pharmacist signup page
+                    window.location.href = "PharmacistsForm.html";
+                    break;
+                default:
+                    alert("Please select a signup option");
+                    break;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?php
+// Include the session handler code
+require_once("session_handler.php");
+
+// Check if the user is logged in
+checkLoggedIn();
+
+// Get the logged-in username
+$username = getUsername();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div style="padding: 10px; background-color: #efb5b5;">
+        <div class="top-right">
+            <span>Welcome: <?php echo $username; ?></span><br>
+            <button onclick="logout()">Logout</button>
+            <button onclick="redirectToPatientHistory()">Patient History</button>
+        </div>
+
+        <!-- Rest of the dashboard content goes here -->
+    </div>
+
+    <script>
+        // Function for logout functionality
+        function logout() {
+            // Add your logout code here
+            window.location.href = "logout.php";
+        }
+
+        // Function to redirect to Patient History page
+        function redirectToPatientHistory() {
+            window.location.href = "patient_history.php";
+        }
+    </script>
+</body>
+</html>

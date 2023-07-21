@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {background-color:#ffffff;}
+  h2 {color:#F29918;}
+</style>
+<script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var toggleButton = document.getElementById("toggleButton");
+    
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.textContent = "Hide";
+      } else {
+        passwordInput.type = "password";
+        toggleButton.textContent = "Show";
+      }
+    }
+    </script>
+<title>Pharmacist's Sign up</title>
+</head>
+<body>
+<h2>Pharmacist's Sign up</h2>
+<form action="http://localhost/projectFolder/add_pharmacist.php" method="post">
+      
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    
+    <label for="pharmacyName">Pharmacy Name:</label><br>
+    <input type="text" id="pharmacyName" name="pharmacyName"><br>
+    
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address"><br>
+
+    <label for="phoneNumber">Phone Number:</label><br>
+    <input type="text" id="phoneNumber" name="phoneNumber"><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+
+    <input type="submit" name="add" value="Add Pharmacist" id="add_pharmacist">
+</form>
+</body>
+</html>
