@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert New Drug</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    
+    <h2>Insert New Drug</h2>
+    <form method="POST" action="add_drug.php">
+        <label for="tradeName">Trade Name:</label>
+        <input type="text" id="tradeName" name="tradeName" required><br>
+
+        <label for="formula">Formula:</label>
+        <input type="text" id="formula" name="formula" required><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" required><br>
+
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" required><br>
+
+        <label for="drugType">Drug Type:</label>
+        <input type="text" id="drugType" name="drugType" required><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br>
+
+        <input type="submit" name="submit" value="Add Drug">
+    </form>
+</body>
+</html>

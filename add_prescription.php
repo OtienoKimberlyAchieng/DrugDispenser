@@ -6,14 +6,14 @@ $PSSN= $_POST["PSSN"];
 $DSSN=$_POST["DSSN"];
 $diagnosis = $_POST["diagnosis"];
 $tradeName= $_POST["tradeName"];
-$quantity = $_POST["quantity"];
+$frequency = $_POST["frequency"];
 $date= $_POST["date"];
 
 
 
 
-$sql = "INSERT INTO prescription(PSSN, DSSN,diagnosis,tradeName,quantity,date)
-VALUES('$PSSN', '$DSSN','$diagnosis','$tradeName','$quantity','$date')";
+$sql = "INSERT INTO prescription(PSSN, DSSN,diagnosis,tradeName,frequency,date)
+VALUES('$PSSN', '$DSSN','$diagnosis','$tradeName','$frequency','$date')";
 
 
 if($conn->query($sql)==TRUE){

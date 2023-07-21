@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dispense Drugs</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Drug dispenser</h2>
+<form action="http://localhost/projectFolder/dispense_drug.php" method="post">
+    
+    <label for="tradeName">Trade Name:</label><br>
+    <input type="text" id="tradeName" name="tradeName" required><br>
+    
+    <label for="quantity">Quantity:</label><br>
+    <input type="text" id="quantity" name="quantity" required><br>
+
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="price" required><br>
+    
+    <label for="dateSold">Date of dispensing:</label><br>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="PSSN">PSSN:</label><br>
+    <input type="text" id="PSSN" name="PSSN" required><br>
+
+    <label for="PHSSN">PHSSN:</label><br>
+    <input type="text" id="PHSSN" name="PHSSN" required><br>
+    
+    
+    <input type="submit" name="add" value="Dispense Drug" id="dispense_drug">
+</form>
+</body>
+</html>

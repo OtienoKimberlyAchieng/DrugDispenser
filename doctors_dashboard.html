@@ -1,0 +1,37 @@
+<?php
+// Start the session (if not already started)
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor's Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-right">
+        <?php
+        // Check if the session variable for username is set
+        if (isset($_SESSION['username'])) {
+            $username = $_SESSION['username'];
+            echo "Welcome, " . $username;
+        } else {
+            // If the session variable is not set, display a default message
+            echo "Welcome, Guest";
+        }
+        ?>
+    </div>
+    <h2>Doctor's Dashboard</h2>
+    <button onclick="location.href='drugs.php'">Drugs</button><br>
+    <button onclick="location.href='patient_history.html'">Check Patients History</button><br>
+    <button onclick="location.href='PrescriptionForm.html'">Prescribe</button>
+</body>
+</html>
